@@ -1,6 +1,6 @@
 # Hi, I'm Alper Düzgün 👋
 
-**ML engineer in the making**, and a senior **Artificial Intelligence & Data Engineering** student at **Istanbul Technical University (İTÜ)**.
+**AI engineer in the making**, and a senior **Artificial Intelligence & Data Engineering** student at **Istanbul Technical University (İTÜ)**.
 I train language models from scratch, fine-tune vision foundation models, and make robots pick things up in simulation.
 
 🔎 **Open to full-time & part-time roles** in **ML / AI Engineering, Data Science, Computer Vision, Robotics and ML Research**. Graduating **January 2027**.
