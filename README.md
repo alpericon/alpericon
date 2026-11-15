@@ -33,6 +33,7 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 
 | Project | What it does | Stack |
 |---|---|---|
+| 🎙️ [**Voice-to-SQL**](https://github.com/alpericon/voice-to-sql) | *Solo project.* Speak a question about a database and hear the answer: **Whisper** ASR → **SQLCoder-7B** (4-bit) text-to-SQL → validated SQLite execution → spoken reply via VITS/gTTS. Benchmarked on 400 noisy Spider queries (clean to 0 dB SNR): WER rises 10× at 0 dB but SQL execution accuracy drops only ~7 pp, and profiling shows the LLM accounts for ~96% of latency. | Whisper, Transformers, SQLite, Coqui TTS |
 | 🎯 [**SAMet: Video Object Segmentation with SAM 2**](https://github.com/alpericon/YZV416E_Project) | *Team project, İTÜ Computer Vision course.* Evaluation and fine-tuning pipeline for Meta's SAM 2 on DAVIS 2017: zero-shot baseline (**0.905 J&F**), mask-decoder fine-tuning with a frozen backbone, and ablations over LR scheduling, boundary loss and uncertainty-weighted losses. | PyTorch, SAM 2, DAVIS, TensorBoard |
 | 🧠 [**Multi-Modal Brain Tumor Segmentation**](https://github.com/yusufkaramustafa/Brain-Tumor-Segmentation) | *Team project.* Comparative study of **U-Net, LSTM-UNet and Transformer-based** models for segmenting tumour regions in multi-modal MRI (T1, T2, FLAIR, T1Gd) from the **BraTS 2021** dataset. | PyTorch, Jupyter, medical imaging |
 | 📈 [**Unsupervised Anomaly Detection in HDFS Logs**](https://github.com/alpericon/Anomaly-Detection-in-System-Logs) | *Pair project with Yusuf Karamustafa (pair-programmed; commits are under his account).* End-to-end pipeline: parses **11M+ log entries (1.47 GB)** with Apache Spark, maps raw messages to 29 event templates, builds 575K block-level traces, and trains an **LSTM autoencoder** that flags anomalous executions without labels. Includes threshold sensitivity and scalability benchmarks. | Apache Spark, PyTorch, LSTM |
@@ -40,6 +41,7 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 
 ### Other projects
 - 🗣️ [**Turkish–Italian Idiom Detection**](https://github.com/yusufkaramustafa/Turkish-Italian-Idiom-Detection): *team project.* Multilingual sequence-labelling model that tags idioms in text, combining a pre-trained transformer (BERT / RoBERTa / XLM-R) with dilated convolutions, BiLSTM, multi-head attention and a CRF layer.
+- 📐 [**Point Set Registration & Image Stitching**](https://github.com/alpericon/point-set-registration): SVD (via power iteration) and Kabsch–Umeyama written from scratch in NumPy, used to align 3D point clouds and stitch 2D images with rotation, translation and scale.
 - 🎬 [**TMDB Movie Analytics Dashboard**](https://github.com/itu-dallasli/imdb_dashboard_powerbi): *team project.* Data cleaning and EDA in Python, feeding an interactive Power BI dashboard on budget vs. revenue, production geography and actor co-star networks.
 
 ---
@@ -47,7 +49,7 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 ## 🧰 Tech stack
 
 **Languages:** Python · TypeScript/JavaScript<br>
-**ML / DL:** PyTorch · Hugging Face Transformers · Ultralytics YOLO · SAM 2 · U-Net<br>
+**ML / DL:** PyTorch · Hugging Face Transformers · Ultralytics YOLO · SAM 2 · U-Net · Whisper<br>
 **Data:** Apache Spark · NumPy · Pandas · Jupyter · Power BI<br>
 **Tools:** Git · uv · CUDA · TensorBoard · MuJoCo
 
