@@ -34,6 +34,7 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 | Project | What it does | Stack |
 |---|---|---|
 | 🎯 [**SAMet: Video Object Segmentation with SAM 2**](https://github.com/alpericon/YZV416E_Project) | *Team project, İTÜ Computer Vision course.* Evaluation and fine-tuning pipeline for Meta's SAM 2 on DAVIS 2017: zero-shot baseline (**0.905 J&F**), mask-decoder fine-tuning with a frozen backbone, and ablations over LR scheduling, boundary loss and uncertainty-weighted losses. | PyTorch, SAM 2, DAVIS, TensorBoard |
+| 📈 [**Unsupervised Anomaly Detection in HDFS Logs**](https://github.com/yusufkaramustafa/Anomaly-Detection-in-System-Logs) | *Pair project with Yusuf Karamustafa (pair-programmed; commits are under his account).* End-to-end pipeline: parses **11M+ log entries (1.47 GB)** with Apache Spark, maps raw messages to 29 event templates, builds 575K block-level traces, and trains an **LSTM autoencoder** that flags anomalous executions without labels. Includes threshold sensitivity and scalability benchmarks. | Apache Spark, PyTorch, LSTM |
 | 🤖 [**Robotics Med Cup Collector**](https://github.com/alpericon/Robotics-Med-Cup-Collector) | *Team project.* Autonomous pipeline for a Hello Robot Stretch in MuJoCo: navigate to tables, detect humans and cups, grasp with visual servoing, and drop the cup in the trash. | MuJoCo, YOLO, Python |
 
 ### Other projects
@@ -46,7 +47,7 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 
 **Languages:** Python · TypeScript/JavaScript<br>
 **ML / DL:** PyTorch · Hugging Face · Ultralytics YOLO · SAM 2<br>
-**Data:** NumPy · Pandas · Jupyter · Power BI<br>
+**Data:** Apache Spark · NumPy · Pandas · Jupyter · Power BI<br>
 **Tools:** Git · uv · CUDA · TensorBoard · MuJoCo
 
 ---
