@@ -33,7 +33,8 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 
 | Project | What it does | Stack |
 |---|---|---|
-| 🎙️ [**Voice-to-SQL**](https://github.com/alpericon/voice-to-sql) | *Solo project.* Speak a question about a database and hear the answer: **Whisper** ASR → **SQLCoder-7B** (4-bit) text-to-SQL → validated SQLite execution → spoken reply via VITS/gTTS. Benchmarked on 400 noisy Spider queries (clean to 0 dB SNR): WER rises 10× at 0 dB but SQL execution accuracy drops only ~7 pp, and profiling shows the LLM accounts for ~96% of latency. | Whisper, Transformers, SQLite, Coqui TTS |
+| 🗄️ [**tiny-sql-rl**](https://github.com/alpericon/tiny-sql-rl) | *Solo project, follow-up to Voice-to-SQL.* Trained **Qwen3-1.7B with GRPO on an execution reward** (4-bit QLoRA, one 8 GB laptop GPU) to replace SQLCoder-7B. Spider dev execution accuracy **54.1% → 59.0%** (official script, 84 wins / 33 losses). On spoken questions it **ties the 7B model from clean audio to 10 dB SNR**. Re-measuring the old pipeline showed its 14 s "LLM bottleneck" was a runtime problem: SQLCoder takes ~2 s when run properly. Released on [Hugging Face](https://huggingface.co/Alpericon/tiny-sql-rl) with a GGUF build and a local voice demo. | TRL, Unsloth, vLLM, llama.cpp, Gradio |
+| 🎙️ [**Voice-to-SQL**](https://github.com/alpericon/voice-to-sql) | *Solo project.* Speak a question about a database and hear the answer: **Whisper** ASR → **SQLCoder-7B** (4-bit) text-to-SQL → validated SQLite execution → spoken reply via VITS/gTTS. Benchmarked on 400 noisy Spider queries (clean to 0 dB SNR): WER rises 10× at 0 dB but SQL execution accuracy drops only ~7 pp, and profiling shows the LLM accounts for ~96% of latency. *(A follow-up, tiny-sql-rl, traced most of that to the runtime setup rather than the 7B model.)* | Whisper, Transformers, SQLite, Coqui TTS |
 | 🎯 [**SAMet: Video Object Segmentation with SAM 2**](https://github.com/alpericon/YZV416E_Project) | *Team project, İTÜ Computer Vision course.* Evaluation and fine-tuning pipeline for Meta's SAM 2 on DAVIS 2017: zero-shot baseline (**0.905 J&F**), mask-decoder fine-tuning with a frozen backbone, and ablations over LR scheduling, boundary loss and uncertainty-weighted losses. | PyTorch, SAM 2, DAVIS, TensorBoard |
 | 🧠 [**Multi-Modal Brain Tumor Segmentation**](https://github.com/yusufkaramustafa/Brain-Tumor-Segmentation) | *Team project.* Comparative study of **U-Net, LSTM-UNet and Transformer-based** models for segmenting tumour regions in multi-modal MRI (T1, T2, FLAIR, T1Gd) from the **BraTS 2021** dataset. | PyTorch, Jupyter, medical imaging |
 | 📈 [**Unsupervised Anomaly Detection in HDFS Logs**](https://github.com/alpericon/Anomaly-Detection-in-System-Logs) | *Pair project with Yusuf Karamustafa (pair-programmed; commits are under his account).* End-to-end pipeline: parses **11M+ log entries (1.47 GB)** with Apache Spark, maps raw messages to 29 event templates, builds 575K block-level traces, and trains an **LSTM autoencoder** that flags anomalous executions without labels. Includes threshold sensitivity and scalability benchmarks. | Apache Spark, PyTorch, LSTM |
@@ -49,7 +50,7 @@ Advised by Prof. B. U. Töreyin. **I've led the project since September 2026.**
 ## 🧰 Tech stack
 
 **Languages:** Python · TypeScript/JavaScript<br>
-**ML / DL:** PyTorch · Hugging Face Transformers · Ultralytics YOLO · SAM 2 · U-Net · Whisper<br>
+**ML / DL:** PyTorch · Hugging Face Transformers · TRL (GRPO) · Unsloth · vLLM · llama.cpp · Ultralytics YOLO · SAM 2 · U-Net · Whisper<br>
 **Data:** Apache Spark · NumPy · Pandas · Jupyter · Power BI<br>
 **Tools:** Git · uv · CUDA · TensorBoard · MuJoCo
 
